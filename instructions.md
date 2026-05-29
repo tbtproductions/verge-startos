@@ -1,25 +1,27 @@
-# Hello World
+# Verge — Net Worth Tracker
 
-You've installed Hello World — there's nothing to configure and nothing to set up. This page covers how to open the page it serves and where to read more. (If you're a developer, Hello World is also the recommended packaging template.)
+Verge is a self-hosted net worth tracker with live Bitcoin, crypto, and stock prices.
 
-## Documentation
+## Getting Started
 
-- [Hello World upstream docs](https://github.com/Start9Labs/hello-world/blob/master/README.md) — the README for the web server this package runs.
-- [StartOS Packaging Guide](https://docs.start9.com/packaging) — how to build a StartOS service package from that template.
+1. Open the Web UI from the Dashboard
+2. Add your assets (Bitcoin, savings, stocks, etc.)
+3. Set your financial goal
+4. Hit Refresh Prices to pull in live data
 
-## What you get on StartOS
+## Stock Prices (Optional)
 
-- **A running web server** that serves a single static page.
-- **Nothing to configure and no actions** — the service starts on its own and is immediately usable.
+Verge uses Finnhub to fetch stock prices. To enable stocks:
 
-## Getting set up
+1. Go to **finnhub.io** and sign up for a free account
+2. Copy your API key
+3. Go to **Actions** on this service page
+4. Click **Set Finnhub API Key**
+5. Paste your key and save
+6. Restart the service
 
-There's no setup wizard, no admin password, no first-run prompt — Hello World is usable the moment it starts. To view the page it serves:
+Bitcoin and crypto prices work without any API key.
 
-1. Open Hello World's **Dashboard** tab.
-2. Click the **Web UI** interface to open the served page in your browser.
+## Data
 
-## Limitations
-
-- Hello World is intentionally minimal. It is not a useful service on its own; it exists to demonstrate the StartOS packaging system.
-- The page content is static and cannot be customized through the StartOS UI.
+Your data is stored on your Start9 node at `/data/verge-data.json` and is included in backups.

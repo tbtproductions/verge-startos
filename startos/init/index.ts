@@ -4,13 +4,13 @@ import { setInterfaces } from '../interfaces'
 import { versionGraph } from '../versions'
 import { actions } from '../actions'
 import { restoreInit } from '../backups'
-
+import { onInstall } from './onInstall'
 export const init = sdk.setupInit(
   restoreInit,
   versionGraph,
   setInterfaces,
   setDependencies,
   actions,
+  onInstall,
 )
-
 export const uninit = sdk.setupUninit(versionGraph)
